@@ -46,9 +46,9 @@
         <h1>
           Overview
         </h1>
-<p>&quot;Game Engine&quot; is an unimaginatively named set of bindings for <a href="https://www.libsdl.org/">SDL2</a> with an embedded <a href="https://v8.dev/docs">v8 Javascript engine</a>. Its sole purpose for the moment is educational. It is not intened to be a competitor to other tools already available, such as <a href="https://www.npmjs.com/package/sdl">node-sdl</a> or the many <a href="https://github.com/collections/javascript-game-engines">Javascript game engines</a></p><p>From the Javascript side, access to the Game Engine is provided through a global module called &quot;GE&quot;:</p><pre class="m-code">use strict;
+<p>&quot;Game Engine&quot; is an unimaginatively named set of bindings for <a href="https://www.libsdl.org/">SDL2</a> with an embedded <a href="https://v8.dev/docs">v8 Javascript engine</a>. Its sole purpose for the moment is educational. It is not intened to be compared to other tools already available, such as <a href="https://www.npmjs.com/package/sdl">node-sdl</a> or the many <a href="https://github.com/collections/javascript-game-engines">Javascript game engines</a></p><p>From the Javascript side, access to the Game Engine is provided through a global module called &quot;GE&quot;:</p><pre class="m-code">use strict;
 const mod = GE.Modules();
-mod.require(&quot;SDL&quot;);</pre><p>Each call to mod.require() will initialize new modules within the global object. After <code>mod.require(&quot;SDL&quot;)</code> we can then say things like <code>const win = SDL.Window()</code></p><pre class="m-code">const init_flags = SDL.InitFlags();
+mod.require(&quot;SDL&quot;);</pre><p>Each call to mod.require() will initialize new modules within the global object. After <code>mod.require(&quot;SDL&quot;)</code> we can then say things like</p><pre class="m-code">const init_flags = SDL.InitFlags();
 const window_flags = SDL.WindowFlags();
 const render_flags = SDL.RenderFlags();
 const pixel_format = SDL.Pixelformat();
