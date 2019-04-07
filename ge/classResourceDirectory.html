@@ -47,7 +47,7 @@
           ResourceDirectory <span class="m-thin">class</span>
           <div class="m-dox-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="directory_8h.html">&lt;/media/pablo/walter/home/walter/code/sdl-v8/src/resource/directory.h&gt;</a></div>
         </h1>
-        <p><span></span></p>
+        <p>Provides a searchable directory of game resources.</p>
         <div class="m-block m-default">
           <h3>Contents</h3>
           <ul>
@@ -60,6 +60,9 @@
             </li>
           </ul>
         </div>
+<p>Provides a directory of game resources which mirrors a recursive directory listing of files. Entries in the directory are intended to carry some guarantee of validity. For instance, if a tilemap is found in the directory then we can assume that it at least contains some sort of valid xml, and that we may refer to it in javascript with the assumption that it will parse quickly on the c++ side.</p><pre class="m-code">    <span class="n">ResourceDirectory</span> <span class="n">dir</span><span class="p">;</span>
+    <span class="n">dir</span><span class="p">.</span><span class="n">BuildFromPath</span><span class="p">(</span><span class="s">&quot;res&quot;</span><span class="p">);</span>
+    <span class="k">const</span> <span class="n">ResourceReference</span><span class="o">*</span> <span class="n">ref</span> <span class="o">=</span> <span class="n">dir</span><span class="p">.</span><span class="n">Find</span><span class="p">(</span><span class="s">&quot;res:examples:test_hexagonal_tile_60x60x30.png&quot;</span><span class="p">);</span></pre>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-dox">
